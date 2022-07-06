@@ -6,7 +6,7 @@ import java.util.Map;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-
+import org.openqa.selenium.devtools.v100.emulation.Emulation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -27,6 +27,7 @@ public class MobileEmulatorTest {
         }};
 		
 		//send commands to CDP methods(Chrome Dev Protocol)
+        //devTools.send(Emulation.setDeviceMetricsOverride(null, null, null, null, null, null, null, null, null, null, null, null, null));
 	 	driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
 	 	driver.get("https://rahulshettyacademy.com/angularAppdemo/");
 	 	driver.findElement(By.cssSelector(".navbar-toggler-icon")).click();
