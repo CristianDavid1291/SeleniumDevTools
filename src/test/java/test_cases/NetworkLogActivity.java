@@ -39,6 +39,7 @@ public class NetworkLogActivity {
 
 		driver.get("https://rahulshettyacademy.com/angularAppdemo/");
 		driver.findElement(By.cssSelector("button[routerlink='/library']")).click();
+		driver.quit();
 		
 	}
 
